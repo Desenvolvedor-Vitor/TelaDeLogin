@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela De Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="campos tela-login">
+        <h1>Login</h1>
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="senha" placeholder="Senha">
+        <button class="btnLogin" onclick="redirecionarParaPag()">Logar</button>
+    </div>
+</body>
+<script>
+        const verificarEmail = document.getElementById("email")
+        const verificarSenha = document.getElementById("senha")
+
+        console.log(verificarEmail)
+        console.log(verificarSenha)
+
+
+    function redirecionarParaPag() {
+
+        let dadosEmail = verificarEmail.value
+        let dadosSenha = verificarSenha.value
+
+        if(dadosEmail == "usuario@email.com" && dadosSenha == "12345"){
+
+            window.location.href = "adm.html";
+
+        }else if(dadosEmail == "cliente@email.com" && dadosSenha == "123456"){
+
+            window.location.href = "client.html";
+                   
+        }else{
+            alert("[ERROR]");
+        }
+    }
+</script>
+</html>
